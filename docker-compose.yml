@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_HOST=db
+      - DATABASE_HOST=postgres_db
       - DATABASE_PORT=5432
       - DATABASE_USER=postgres
       - DATABASE_PASSWORD=postgres
@@ -31,7 +31,7 @@ services:
       - ./Server/backend:/app
     networks:
       - app-network
-
+  
   db:
     image: postgres:15
     container_name: postgres_db
@@ -42,7 +42,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: mydatabase
     volumes:
-      - /Users/mdarify/Desktop/Database:/var/lib/postgresql/data
+      - /Users/mdarify/Desktop/Purienc/Database:/var/lib/postgresql/data
     networks:
       - app-network
 
