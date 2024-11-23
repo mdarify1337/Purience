@@ -18,6 +18,9 @@ function App() {
         >
           Learn React
         </a>
+        <a className='google-button' href='http://localhost:3001/api/auth/google/callback'>
+           hello
+        </a>
       </header>
     </div>
   );
