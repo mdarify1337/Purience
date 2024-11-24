@@ -1,0 +1,30 @@
+####
+GET  http://localhost:3001/api/auth/google/callback
+
+
+### post method
+
+POST http://localhost:3001/api/Operator
+Content-Type: application/json
+
+{
+  "Name": "Mdarify123",
+  "Email": "john45134-112343.doe@gmail.com",
+  "Password": "securePass123",
+  "PhoneNumber": "21234567890",
+  "Provider": "google",
+  "userType": "Operator"
+}
+
+
+POST http://localhost:3001/api/Client
+Content-Type: application/json
+
+{
+  "Name": "Mdarify123",
+  "Email": "john45134-112343.doe@gmail.com",
+  "Password": "securePass123",
+  "PhoneNumber": "21234567890",
+  "Provider": "google",
+  "userType": "Operator"
+}
