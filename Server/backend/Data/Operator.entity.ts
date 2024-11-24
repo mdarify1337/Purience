@@ -61,6 +61,10 @@ export class Operator {
     @Column({ nullable: true })
     ProfilePictureURL?: string;
 
+
+    @Column({nullable: true})
+    Provider?: string;
+
     @CreateDateColumn()
     createdAt: Date;
 

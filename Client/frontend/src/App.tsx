@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const googleLoginUrlClient = `http://localhost:3001/api/auth/google/login?state=${encodeURIComponent(
+    JSON.stringify({ User: 'Client' }),
+  )}`;
+  const googleLoginUrlOperator = `http://localhost:3001/api/auth/google/login?state=${encodeURIComponent(
+    JSON.stringify({ User: 'Operator' }),
+  )}`;
+  console.log('url -> ', googleLoginUrlClient);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +25,14 @@ function App() {
         >
           Learn React
         </a>
-        <a className='google-button' href='http://localhost:3001/api/auth/google/callback'>
+        <a 
+            className='google-button' 
+            href={googleLoginUrlClient}>
+           hello
+        </a>
+        <a 
+            className='google-button' 
+            href={googleLoginUrlOperator}>
            hello
         </a>
       </header>

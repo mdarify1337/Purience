@@ -1,6 +1,7 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt/dist';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Console } from 'console';
 import { Client } from 'Data/Client.entity';
 import { Operator } from 'Data/Operator.entity';
 import { UserType } from 'Data/Usertype.entity';
@@ -8,8 +9,8 @@ import { Repository } from 'typeorm';
 
 export class AuthenticationService {
   constructor(private jwtService: JwtService,
-    @InjectRepository(Client)
-    private readonly ClientRepository: Repository<Client>,
+    @InjectRepository(Client) private readonly ClientRepository: Repository<Client>,
+    @InjectRepository(Operator) private readonly OperatorRepository: Repository<Operator>,
   ) 
   {}
   googleLogin(req) {
@@ -25,11 +26,13 @@ export class AuthenticationService {
     return "Hello"
   }
 
-  async findOrCreateClientUser(UserClient: Partial<Client>): Promise<{ user: Client; firstLogin: boolean }> {
-    let user = await this.ClientRepository.findOne({
-      where: { Email: UserClient.Email },
-    });
-  
+  async findOrCreateClientUser(UserClient: Partial<Client>):
+       Promise<any> {
+         let user = await this.ClientRepository.findOne({
+           where: { Email: UserClient.Email },
+          });
+          
+          console.log('dkhal hna -> 1.1');
     if (user) {
       return { user, firstLogin: false };
     }
@@ -42,6 +45,32 @@ export class AuthenticationService {
     });
     if (newUser){
       const savedUser = await this.ClientRepository.save(newUser);
+      console.log('Saved user -> ', savedUser);
+      return { user: savedUser, firstLogin: true };
+    }
+
+  }
+
+
+  async findOrCreateOperatorUser(UserOperator: Partial<Operator>):
+       Promise<any> {
+        console.log('dkhal hna -> 1.2');
+    let user = await this.OperatorRepository.findOne({
+      where: { Email: UserOperator.Email },
+    });
+  
+    if (user) {
+      return { user, firstLogin: false };
+    }
+    const newUser = this.OperatorRepository.create({
+      Name: UserOperator.Name,
+      Email: UserOperator.Email,
+      ProfilePictureURL: UserOperator.ProfilePictureURL,
+      Provider: UserOperator.Provider,
+      userType: UserType.OPERATOR,
+    });
+    if (newUser){
+      const savedUser = await this.OperatorRepository.save(newUser);
       console.log('Saved user -> ', savedUser);
       return { user: savedUser, firstLogin: true };
     }

@@ -21,11 +21,11 @@ export class Client {
     @PrimaryGeneratedColumn('uuid')
     id?: string;
 
-    @Column()
-    Name: string;
+    @Column({ nullable: true })
+    Name?: string;
 
     @Column({ unique: true })
-    Email: string;
+    Email?: string;
 
     @Column({ nullable: true }) // Allow null passwords for OAuth users
     Password?: string;
@@ -50,6 +50,7 @@ export class Client {
 
     @UpdateDateColumn()
     updatedAt: Date;
+    firstLogin: any;
 
     @BeforeInsert()
     generateUUID() {

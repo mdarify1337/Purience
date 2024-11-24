@@ -1,2 +1,12 @@
 ####
 GET  http://localhost:3001/api/auth/google/callback
+
+
+### post method
+
+POST http://localhost:3001/api/Client
+Content-Type: application/json
+
+{
+    "email": "sdarify@gmail.com"
+}
