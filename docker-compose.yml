@@ -42,7 +42,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: mydatabase
     volumes:
-      - /home/nozel/www/Purience/Database:/var/lib/postgresql/data
+      - /Users/adihaj/Desktop/Purience/Database:/var/lib/postgresql/data
     networks:
       - app-network
 

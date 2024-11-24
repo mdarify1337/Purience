@@ -6,6 +6,10 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'], // Add fallback 'sans-serif'
+        raleway: ['Raleway', 'sans-serif'],
+      },
+      boxShadow: {
+        'custom': '0px 2px 8px 0px rgba(0, 0, 0, 0.15)',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -14,6 +18,9 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         theme: "#EB662B",
+        white: '#F9F9F9',
+        dark_gray: "#717171",
+        dark_blue: '#05073C',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

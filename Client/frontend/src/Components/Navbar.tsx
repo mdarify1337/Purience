@@ -2,14 +2,15 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='w-full flex p-4 justify-between'>
-      <h3 className='text-theme font-semibold text-lg'>Purience</h3>
-      <ul className='text-black text-sm flex gap-5 items-center'>
+    <nav className='w-full flex p-4 justify-between px-8 md:px-10 lg:px-20'>
+      <h3 className='text-theme font-semibold text-xl'>Purience</h3>
+      <ul className='text-black text-sm flex gap-6 items-center font-normal'>
         <li>About Us</li>
         <li>Contact US</li>
-        <li className='bg-theme p-2 rounded-2xl'><a href="#">Login</a></li>
+        <li>Sign Up</li>
+        <li className='bg-theme p-2 px-5 rounded-2xl text-white '><a href="#">Login</a></li>
       </ul>
-    </div>
+    </nav>
   )
 }
 
