@@ -21,7 +21,7 @@ export const State = createParamDecorator(
 export class AuthenticationController {
   constructor(private readonly authenticationService: AuthenticationService) { }
 
-  @Post()
+  @Post('/Client')
   @ApiOkResponse(
     { 
       description: 'User Created', 
@@ -47,7 +47,7 @@ export class AuthenticationController {
   }
 
 
-  @Post()
+  @Post('/Operator')
   @ApiOkResponse(
     { 
       description: 'User Created', 
@@ -69,7 +69,7 @@ export class AuthenticationController {
   async createOpeartorUser(@Body() createUserDto: 
     CreateOperatorDto) {
     return this.authenticationService.
-      findOrCreateClientUser(createUserDto);
+      findOrCreateOperatorUser(createUserDto);
   }
 
   
