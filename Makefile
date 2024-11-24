@@ -6,7 +6,7 @@ up: build
 build:
 	mkdir -p ./Client/frontend/node_modules/
 	mkdir -p ./Server/backend/node_modules/
-	docker compose -f docker-compose.yml build --no-cache
+	docker compose -f docker-compose.yml build 
 
 down:
 	docker compose -f docker-compose.yml down -v

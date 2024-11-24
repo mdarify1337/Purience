@@ -1,24 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import { url } from 'inspector';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-red-500 font-poppins">
+     <div className="border-2 h-[80vh] border-blue-600 bg-cover bg-center " style={{backgroundImage: "url('/landing-img.png')"}}>
+      
+        <Navbar/>
+        {/* <img src="/landing-img.png" alt="" /> */}
+
+      </div>
     </div>
   );
 }

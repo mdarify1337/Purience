@@ -4,17 +4,17 @@ FROM node:latest
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json, package-lock.json, and other necessary config files
-COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/tsconfig.json ./
+# Copy package.json and package-lock.json
+COPY ./frontend/package.json ./frontend/package-lock.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
-COPY ./frontend .
+COPY ./frontend/ .
 
-# Expose port 3000
+# Expose the port the React app runs on
 EXPOSE 3000
 
-# Start the Next.js app in development mode
+# Start the React app
 CMD ["npm", "start"]

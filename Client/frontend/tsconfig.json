@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "baseUrl": ".",
+    "jsx": "react",
+        "paths": {
+        "@/*": ["src/*"]
+        },
     "lib": [
       "dom",
       "dom.iterable",
@@ -24,3 +29,7 @@
     "src"
   ]
 }
+
+
+
+
