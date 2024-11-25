@@ -27,22 +27,22 @@ export class Client {
     @Column({ unique: true })
     Email?: string;
 
-    @Column({ nullable: true }) // Allow null passwords for OAuth users
+    @Column({ nullable: true }) 
     Password?: string;
 
     @Column({ type: 'enum', enum: UserType, default: UserType.CLIENT })
     userType: UserType;
 
-    @Column({ nullable: true }) // Optional for OAuth users
+    @Column({ nullable: true })
     PhoneNumber?: string;
 
-    @Column({ nullable: true }) // Optional for OAuth users
+    @Column({ nullable: true })
     Provider?: string;
 
-    @Column({ nullable: true }) // Optional for OAuth users
+    @Column({ nullable: true })
     LanguagePreference?: string;
 
-    @Column({ nullable: true }) // Optional for OAuth users
+    @Column({ nullable: true })
     ProfilePictureURL?: string;
 
     @CreateDateColumn()

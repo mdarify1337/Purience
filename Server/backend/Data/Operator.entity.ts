@@ -14,7 +14,7 @@ import {
 } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid'
 import { UserType } from './Usertype.entity';
-
+import { Experience } from './Experience.entity';
 
 
 @Entity('Operator')
@@ -70,6 +70,9 @@ export class Operator {
 
     @UpdateDateColumn()
     updatedAt: Date;
+
+    @OneToMany(() => Experience, (experience) => experience.operator, { cascade: true })
+    experiences: Experience[];
 
     @BeforeInsert()
     generateUUID() {

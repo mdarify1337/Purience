@@ -5,6 +5,8 @@ import { AuthenticationModule } from 'Authentication/authentication.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Client } from 'Data/Client.entity';
 import { Operator } from 'Data/Operator.entity';
+import { Experience } from 'Data/Experience.entity';
+import { ExperienceModule } from 'Experience/Experience.module';
 
 @Module({
   imports: [
@@ -17,11 +19,13 @@ import { Operator } from 'Data/Operator.entity';
       database: process.env.DATABASE_NAME,
       synchronize: true,
       autoLoadEntities: true,
-      entities:[Client, Operator]
+      entities:[Client, Operator, Experience]
     }),
-    AuthenticationModule
+    AuthenticationModule,
+    ExperienceModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
+

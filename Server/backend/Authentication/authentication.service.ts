@@ -58,7 +58,6 @@ export class AuthenticationService {
     let user = await this.OperatorRepository.findOne({
       where: { Email: UserOperator.Email },
     });
-  
     if (user) {
       return { user, firstLogin: false };
     }
@@ -112,5 +111,9 @@ export class AuthenticationService {
       };
   }
 
+
+  async findAllUsersOperators(): Promise<Operator[]> {
+    return await this.OperatorRepository.find();
+  }
 }
 
