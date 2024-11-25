@@ -60,16 +60,27 @@ Content-Type: application/json
 GET http://localhost:3001/api/experiences
 
 ### Get Experience by ID
-GET http://localhost:3001/api/experiences/874f0149-71bc-4f06-92d3-fa12f9eb1585
+GET http://localhost:3001/api/experiences/737853c7-2785-4653-9b33-0f67827c20f2
 
 ### Update Experience
-PUT http://localhost:3001/api/experiences/874f0149-71bc-4f06-92d3-fa12f9eb1585
+PUT http://localhost:3001/api/experiences/737853c7-2785-4653-9b33-0f67827c20f2
 Content-Type: application/json
 
 {
-  "Price": 250.00,
+  "Price": 1250.00,
   "Currency": "USD"
 }
 
 ### Delete Experience
-DELETE http://localhost:3001/api/experiences/874f0149-71bc-4f06-92d3-fa12f9eb1585
+DELETE http://localhost:3001/api/experiences/6298995b-084c-42c3-b44a-1d4b140ac982
+
+
+### GET ALL EXPERINECES CREATED BY SPECIFIC OPERATOR
+
+GET http://localhost:3001/api/experiences/operator/89883e8e-5c4e-4d1f-8956-1c8e3ae11a3e
+
+
+### GET ALL EXPERIENCES BETWEEN TWO DATES
+
+GET http://localhost:3001/api/experiences/date-range?startDate=2024-01-01T00:00:00Z&endDate=2024-11-31T23:59:59Z HTTP/1.1
+Accept: application/json

@@ -34,7 +34,12 @@ export class Operator {
     @Column({ nullable: true })
     CompanyName?: string;
 
-    @Column({ type: 'enum', enum: UserType, default: UserType.OPERATOR })
+    @Column(
+        { 
+            type: 'enum', 
+            enum: UserType, 
+            default: UserType.OPERATOR 
+        })
     userType: UserType;
 
     @Column({ nullable: true })

@@ -9,8 +9,8 @@ import { Operator } from 'Data/Operator.entity';
 
 @Module({
     imports: [
-      TypeOrmModule.forFeature([Experience, Operator]),  // Make sure to include both Experience and Operator here
-      AuthenticationModule,  // Import AuthenticationModule if the OperatorRepository is part of it
+      TypeOrmModule.forFeature([Experience, Operator]),
+      AuthenticationModule,
     ],
     providers: [ExperienceService],
     controllers: [ExperienceController],

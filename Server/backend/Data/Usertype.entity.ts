@@ -3,6 +3,4 @@ export enum UserType {
     OPERATOR = 'Operator',
     GUEST = 'Guest',
     ADMINER = 'Adminer',
-    SIGNUP = 'SignUp'
   }
-  

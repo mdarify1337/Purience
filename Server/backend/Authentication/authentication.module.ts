@@ -30,5 +30,6 @@ import { Operator } from "Data/Operator.entity";
     controllers: [AuthenticationController],
     providers: [AuthenticationService, GoogleStrategy, JwtService],
     exports: [AuthenticationService, JwtModule]
+    
 })
 export class AuthenticationModule {}
