@@ -9,7 +9,10 @@ module.exports = {
         raleway: ['Raleway', 'sans-serif'],
       },
       boxShadow: {
-        'custom': '0px 2px 8px 0px rgba(0, 0, 0, 0.15)',
+        'custom': '0px 2px 8px 0px rgba(0, 0, 0, 0.10)',
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(104deg, rgba(235, 102, 43, 0.34) -1.03%, rgba(14, 11, 67, 0.43) 31.01%)',
       },
       colors: {
         border: "hsl(var(--border))",

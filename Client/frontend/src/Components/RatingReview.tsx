@@ -48,7 +48,7 @@ const RatingReview: React.FC<RatingReviewProps> = ({
         })}
       </div>
       <span className="text-[12px] text-dark_blue text-center flex items-center">
-        {displayedRating} ({rating_count})
+        {displayedRating} ({rating_count} reviews)
       </span>
     </div>
   );

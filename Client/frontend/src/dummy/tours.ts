@@ -8,7 +8,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 189.25,
-      "image": "/tour-img.jpg"
+      "image": "/images/tour-img.jpg"
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 225.00,
-      "image": "chefchaouen.jpg"
+      "image": "/images/chefchaouen.jpg"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 943.00,
-      "image": "atlas.jpg"
+      "image": "/images/atlas.jpg"
     },
     {
       "id": 4,
@@ -41,7 +41,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 771.00,
-      "image": "marrakech.jpg"
+      "image": "/images/marrakech.jpg"
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 189.25,
-      "image": "ibiza.jpg"
+      "image": "/images/ibiza.jpg"
     },
     {
       "id": 6,
@@ -63,7 +63,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 225.00,
-      "image": "alhambra.jpg"
+      "image": "/images/alhambra.jpg"
     },
     {
       "id": 7,
@@ -74,7 +74,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 943.00,
-      "image": "valencia.jpg"
+      "image": "/images/valencia.jpg"
     },
     {
       "id": 8,
@@ -85,7 +85,7 @@ const tours = [
       "duration": "10 Days / 11 Nights",
       "days": 4,
       "price": 771.00,
-      "image": "newyork.png"
+      "image": "/images/newyork.png"
     }
   ]
   

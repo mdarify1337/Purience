@@ -20,7 +20,7 @@ const Tour: React.FC<TourProps> = ({ tour }) => {
   const [rating, setRating] = useState<number>(tour.rating); // Use the initial rating from props
 
   return (
-    <div className="w-[300px] rounded-[12px] h-[370px] p-2 border-[#E7E6E6] border-[1.5px] shadow-custom">
+    <div className="relative z-10 w-[300px] rounded-[12px] h-[370px] bg-[#ffffff] p-2 border-[#E7E6E6] border-[1.5px] shadow-custom">
       <img
         src={tour.image}
         alt={tour.title}
