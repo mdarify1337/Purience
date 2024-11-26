@@ -19,5 +19,5 @@ export default function FourHundredFourError() {
     }
   }, []);
 
-  return <div ref={svgContainerRef} style={{ width: '100%', height: '100%' }} />;
+  return <div className='Sanimation' ref={svgContainerRef} style={{ width: '100%', height: '100%' }} />;
 }

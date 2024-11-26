@@ -1,11 +1,11 @@
-html {
+/* html {
   margin: 0;
   padding: 0;
   background-color: white;
-}
+} */
 
 
-html {
+/* html {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -13,8 +13,8 @@ html {
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-  background-color: black;
-}
+  background-color: #FA7436;
+} */
 
 #svgContainer {
   width: 900px;

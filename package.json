@@ -1,14 +1,18 @@
 {
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/microservices": "^10.4.8",
     "@nestjs/passport": "^10.0.3",
+    "@shadcn/ui": "^0.0.4",
     "amqplib": "^0.10.4",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
-    "passport-jwt": "^4.0.1"
+    "passport-jwt": "^4.0.1",
+    "react-hook-form": "^7.53.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/passport-jwt": "^4.0.1"
